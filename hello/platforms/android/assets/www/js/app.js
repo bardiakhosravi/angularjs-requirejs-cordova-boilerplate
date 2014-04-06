@@ -1,20 +1,13 @@
 /**
  * Created by bkhosravi on 2014-04-01.
  */
-define([
-    "angular"
-    //'./config',
-    /*'controller/HomeController'*/],
+define(["angular", "controller/HomeController"],
 
-    function(angular) { 
-
-        //'use strict';
+    function(angular, HomeController) { 
 
         var app = angular.module('mainApp', []);
         
-        app.controller("HomeController", function($scope) {
-            $scope.message = "Hello World!";
-        });
+        app.controller("HomeController", HomeController);
 
         return app;
     }
